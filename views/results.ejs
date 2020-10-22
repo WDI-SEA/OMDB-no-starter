@@ -1,0 +1,4 @@
+<h1> Search Results:</h1>
+<% searchArray.forEach(movie=> { %>
+    <li><a href='/movies/<%= movie.imdbID %>'><%= movie.Title %></a></li>
+<% }) %>
