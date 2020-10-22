@@ -22,7 +22,7 @@ We'll be creating an app that connects to [OMDB](http://www.omdbapi.com), a publ
 2. Write your GET route for `/movies`.
   * Use `req.query` to access query string parameters.
   * Use the `axios` module to make a request to the OMDB API with this data. YOU WILL NEED TO INSTALL AND REQUIRE IT.
-  * Send the data back to the browser. Use `res.render` and use the provided `results.ejs` template.
+  * Send the data back to the browser. Use `res.render` a `movies.ejs` (or `results.ejs`)template.
 3. In the results from the API, we notice that in every movie entry
 there is a IMDBid. In the rendered HTML for `/movies`, have each movie link
 to a route like `/movies/tt234323` (where `tt234323` is the IMDBid for that movie).
