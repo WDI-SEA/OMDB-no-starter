@@ -13,10 +13,10 @@ router.post('/', (req, res) => {
     console.log('Here is req body',req.body)
     let movieTitle = req.body.title
     let movieId = req.body.imdbID
-    //using title parameter only returns a single title at a time but I was having trouble with my API key. If you want to return multiple results, swap &s= in for &t= in line below
-    axios.get(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=${movieTitle}`)
+    //using title search (t) only returns a single title, a general search (s) returns multiple titles.
+    axios.get(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${movieTitle}`)
     .then(response => {
-        let movieResults = response.data
+        let movieResults = response.data.Search
         console.log(movieResults)
         res.render('results.ejs',{movieResults: movieResults})
     })

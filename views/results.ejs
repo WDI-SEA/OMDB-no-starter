@@ -3,9 +3,13 @@
 <h2>Titles</h2>
 
 <ul>
-    <a href='/movies/<%=movieResults.imdbID%>'><%= movieResults.Title %></a>
+    <!--<a href='/movies/<%=movieResults.imdbID%>'><%= movieResults.Title %></a>-->
 
     <!--<% for(property in movieResults) { %>
         <li> <%= movieResults.property %> </li>
     <% } %>--->
+
+    <% movieResults.forEach(movie=> { %>
+        <li><a href="/movies/<%= movie.imdbID %>"><%= movie.Title %></a></li>
+    <% }) %>
 </ul>
