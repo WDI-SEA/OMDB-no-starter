@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const axios = require('axios')
+const fs = require('fs')
 
 
 // GET Method
@@ -10,6 +11,7 @@ router.get('/', (req, res)=>{
     axios.get(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${movie}`)
     .then((response)=>{
         let searchArray = response.data.Search
+        console.log(searchArray)
         res.render('results', {searchArray: searchArray})
     })
     .catch(err=>{
@@ -21,9 +23,11 @@ router.get('/:movie_id', (req, res)=>{
     let movieId = req.params.movie_id
     axios.get(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&i=${movieId}`)
     .then((response)=>{
-        let movieArray = response.data
-        console.log(movieArray)
-        res.render('show', {imdbID: movieId, movieName: movieArray.Title, movieArray: response.data})
+        fs.writeFileSync('results.json', JSON.stringify(response.data))
+        let movieArray = fs.readFileSync('results.json')
+        let movieData = JSON.parse(movieArray)
+        console.log(movieData)
+        res.render('show', {movieData: movieData})
     })
     .catch(err=>{
         console.log(err)

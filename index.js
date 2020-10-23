@@ -2,9 +2,6 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const ejsLayouts = require('express-ejs-layouts')
-const methodOverride = require('method-override')
-
-app.use(methodOverride('_method'))
 app.set('view engine','ejs')
 app.use(ejsLayouts)
 

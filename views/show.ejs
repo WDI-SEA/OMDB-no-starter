@@ -1,14 +1,30 @@
-<h1>TITLE: <%= movieName %></h1>
-<p>Movie ID: <%= imdbID %></p>
-<img src="<%=movieArray.Poster%>">
+<img src="<%=movieData.Poster%>">
+<h1><%= movieData.Title %> (<%=movieData.Year%>)</h1>
 
-<ul>
-    <li>Year Released: <%=movieArray.Year%></li>
-    <li>Director: <%=movieArray.Director%></li>
-    <li>Genre: <%=movieArray.Genre%></li>
-    <li>Plot Synopsis: <%=movieArray.Plot%></li>
-    <li>Cast: <%=movieArray.Actors%></li>
-    <li>Number of Awards: <%=movieArray.Awards%></li>
-</ul>
+<p><b>Notable Awards: <%=movieData.Awards%><br>
+Rated: <%= movieData.Rated %></b></p>
+
+<div style='font-size: 23px' display='block'>
+    <img src=https://seeklogo.com/images/I/imdb-logo-AF81176825-seeklogo.com.jpg alt="IMDB logo" width= '60'> 
+    <span><%=movieData.Ratings[0].Value%></span>
+</div>
+
+<div style='font-size: 23px' display='block'>
+    <img src="https://i.redd.it/hczmc2o86sw01.png" alt="Rotten Tomatoes Logo" height= '30'width= '90'>
+    <span><%= movieData.Ratings[1].Value %> </span>
+</div>
+
+<p>
+    Title: <%= movieData.Title %> <br>
+    Released: <%=movieData.Released%><br>
+    Production Company: <%=movieData.Production%><br>
+    Genre: <%=movieData.Genre%> <br>
+    Director: <%=movieData.Director%> <br>
+    Writer(s): <%=movieData.Writer%><br>
+    Cast: <%=movieData.Actors%> <br>
+</p>
+
+<p>Plot Synopsis: <%=movieData.Plot%></p>
+
 
 
