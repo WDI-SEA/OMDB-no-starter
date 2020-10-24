@@ -1,0 +1,13 @@
+<%console.log(movie.Search)%>
+
+<ul>
+<% movie.Search.forEach(movie=>{ %>
+    <li>
+   <p> <a href="/movies/<%= movie.imdbID%>"> Click Here for More Details </a></p>
+    <p>Title: <%=movie.Title%></p>
+    <p>Year: <%=movie.Year%> </p>
+    <img src='<%=movie.Poster%>'>
+    </li>
+<% }) %>
+</ul>
+
