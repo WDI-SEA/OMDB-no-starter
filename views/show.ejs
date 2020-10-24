@@ -1,5 +1,5 @@
 <h1><%=movieData.Title%></h1>
-<img src= '<%=movieData.Poster%>'>
+<img src= '<%=movieData.Poster%>' alt='Movie Poster'>
 
 <h3>Release Date</h3>
 <p><%=movieData.Released%></p>
@@ -13,8 +13,8 @@
 <h3>Plot</h3>
 <p><%=movieData.Plot%></p>
 
-<h3>imdb Rating</h3>
-<p><%=movieData.imdbRating%></p>
+<% movieData.Ratings.forEach(rating => { %>
+    <h3><%=rating.Source%> Rating</h3>
+    <p><%=rating.Value%></p>
+<%})%>
 
-<h3>Rotten Tomatoes Rating</h3>
-<p><%=movieData.Ratings[1].Value%></p>

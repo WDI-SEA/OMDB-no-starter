@@ -35,4 +35,6 @@ router.get('/:movie_id', (req, res) => {
     })   
 })
 
+//TO-DO: favorites route
+
 module.exports = router

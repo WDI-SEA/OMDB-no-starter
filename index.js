@@ -4,7 +4,7 @@ const app = express()
 const axios = require('axios')
 
 app.set('view engine', 'ejs')
-//import express-ejs-layouts and require it
+//import express-ejs-layouts and require it -> allows us to leverage template
 const ejsLayouts = require('express-ejs-layouts')
 //set up middleware
 app.use(ejsLayouts)
