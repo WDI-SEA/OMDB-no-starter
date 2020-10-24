@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: black;
+    color: white;
+}
+
+h1{
+    color: lightseagreen;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: rgb(55, 117, 224);;
+}
+
+#movie{
+    height: 20px;
+    width: 150px;
+}
+
+#submit{
+    background:lightseagreen;
+    color: white;
+    border-radius: 5%;
+    border: none;
+    width: 150px;
+    height: 23px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#submit:hover{
+    background: rgb(55, 117, 224);
+    color: white;
+    border-radius: 5%;
+    border: none;
+    width: 150px;
+    height: 23px;
+    cursor: pointer;
+}

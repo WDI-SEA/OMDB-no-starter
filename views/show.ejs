@@ -1,8 +1,16 @@
+<form method="POST" action="/movies/faves" >
+    <input type="hidden" name="title" value="<%= movieData.Title %>">
+    <input type="hidden" name="imdbid" value="<%= movieData.imdbID %>">
+    <input type='submit' id='submit' value="Add to Favorites">
+</form> <br><br>
+
 <img src="<%=movieData.Poster%>">
 <h1><%= movieData.Title %> (<%=movieData.Year%>)</h1>
 
-<p><b>Notable Awards: <%=movieData.Awards%><br>
-Rated: <%= movieData.Rated %></b></p>
+<p><b>
+    Notable Awards: <%=movieData.Awards%><br>
+    Rated: <%= movieData.Rated %>
+</p></b>
 
 <div style='font-size: 23px' display='block'>
     <img src=https://seeklogo.com/images/I/imdb-logo-AF81176825-seeklogo.com.jpg alt="IMDB logo" width= '60'> 
@@ -24,7 +32,7 @@ Rated: <%= movieData.Rated %></b></p>
     Cast: <%=movieData.Actors%> <br>
 </p>
 
-<p>Plot Synopsis: <%=movieData.Plot%></p>
+<p><b>Plot Synopsis: </b> <%=movieData.Plot%></p>
 
 
 
