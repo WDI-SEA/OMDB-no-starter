@@ -7,6 +7,15 @@ We'll be creating an app that connects to [OMDB](http://www.omdbapi.com), a publ
 * Fork and clone this repo
 * Make it a Node app set up with express/ejs/express-ejs-layouts
 
+# ROUTES
+| HTTP Verb | CRUD Mapping | Purpose                                |
+|-----------|--------------|----------------------------------------|
+| GET       | READ         | Access homepage                        |
+| SHOW      | READ         | Filter movies based on search results  |
+| SHOW      | READ         | See detailed results of a single movie |
+| PUT       | CREATE       | Create a list of favorite movies       |
+| POST      | UPDATE       | Add movie to list of favorites         |
+
 # Part 1: Search
 
 ## User Stories
