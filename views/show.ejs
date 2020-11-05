@@ -1,0 +1,38 @@
+<form method="POST" action="/movies/faves" >
+    <input type="hidden" name="title" value="<%= movieData.Title %>">
+    <input type="hidden" name="imdbid" value="<%= movieData.imdbID %>">
+    <input type='submit' id='submit' value="Add to Favorites">
+</form> <br><br>
+
+<img src="<%=movieData.Poster%>">
+<h1><%= movieData.Title %> (<%=movieData.Year%>)</h1>
+
+<p><b>
+    Notable Awards: <%=movieData.Awards%><br>
+    Rated: <%= movieData.Rated %>
+</p></b>
+
+<div style='font-size: 23px' display='block'>
+    <img src=https://seeklogo.com/images/I/imdb-logo-AF81176825-seeklogo.com.jpg alt="IMDB logo" width= '60'> 
+    <span><%=movieData.Ratings[0].Value%></span>
+</div>
+
+<div style='font-size: 23px' display='block'>
+    <img src="https://i.redd.it/hczmc2o86sw01.png" alt="Rotten Tomatoes Logo" height= '30'width= '90'>
+    <span><%= movieData.Ratings[1].Value %> </span>
+</div>
+
+<p>
+    Title: <%= movieData.Title %> <br>
+    Released: <%=movieData.Released%><br>
+    Production Company: <%=movieData.Production%><br>
+    Genre: <%=movieData.Genre%> <br>
+    Director: <%=movieData.Director%> <br>
+    Writer(s): <%=movieData.Writer%><br>
+    Cast: <%=movieData.Actors%> <br>
+</p>
+
+<p><b>Plot Synopsis: </b> <%=movieData.Plot%></p>
+
+
+
